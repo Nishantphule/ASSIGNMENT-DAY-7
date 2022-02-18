@@ -1,0 +1,231 @@
+// QUESTION NO. - 1
+// https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+
+// INPUT-
+class Movie {
+  
+    constructor(title,studio,PG){
+    this.title = title;
+    this.studio =studio;
+    this.PG =PG;
+  }
+  getfilm(){
+    let movie =` 
+    Title  = ${this.title} 
+    Studio = ${this.studio}
+    Rating = ${"PG"+this.PG}`
+     return movie;
+  }
+  
+  }
+  let Film = new Movie( "Casino Royale","Eon Productions",13)
+  console.log(Film.getfilm())
+
+
+CONSOLE OUTPUT-
+ 
+    Title  = Casino Royale 
+    Studio = Eon Productions
+    Rating = PG13
+
+
+
+
+// QUESTION NO. - 2
+// https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
+
+// INPUT-
+// CREATING A CLASS FOR Circle
+class Circle{
+    // SETTER FOR CICLE
+    constructor(radius,color){
+        this.radius=radius;
+        this.color=color;
+    }
+// GETTER FOR RADIUS
+getradius(){
+    let Radius =
+    `Radius: ${this.radius}`
+    return Radius;
+}
+// GETTER FOR COLOR
+getcolor(){
+    let Color =
+    `Color: ${this.color}`
+    return Color;
+}
+// GETTER FOR AREA
+getArea(){
+    let Area = 
+    `Area: ${Math.PI*(this.radius**2)} `
+     return Area;
+}
+// GETTER FOR CIRCUMFERENCE
+getCircumference(){
+    let C = 
+    `Circumference: ${2*Math.PI*this.radius}`
+    return C;
+}
+}
+// CREATING AN OBJECT FOR CIRCLE CLASS
+let circle = new Circle(1.0,"red")
+// ACCESSING INSTANCE METHOD
+console.log(circle.getradius())
+console.log(circle.getcolor())
+console.log(circle.getArea())
+console.log(circle.getCircumference())
+
+
+CONSOLE OUTPUT -
+
+Radius: 1
+script.js:57 Color: red
+script.js:58 Area: 3.141592653589793 
+script.js:59 Circumference: 6.283185307179586
+
+
+
+
+
+// QUESTION NO. - 3
+// Write a “person” class to hold all the details.
+
+// INPUT-
+// creating a class for person
+class person{
+constructor(name,age,city,institute,course){
+    this.name=name;
+    this.age=age;
+    this.city=city;
+    this.institute=institute;
+    this.course=course;
+}
+// getter for person details- instance method
+getDetails(){
+    return `
+    Name: ${this.name}
+    Age: ${this.age}
+    City: ${this.city}
+    Institute: ${this.institute}
+    Course: ${this.course}
+    `
+}
+}
+// creating an object for person class
+let Person= new person("Nishant",21,"Nashik","Guvi","Full Stack Development")
+// accessing instance method
+console.log(Person.getDetails())
+
+
+CONSOLE OUTPUT-
+
+    Name: Nishant Phule
+    Age: 21
+    City: Nashik
+    Institute: Guvi
+    Course: Full Stack Development
+    
+
+
+
+// QUESTION NO. - 4
+// write a class to calculate uber price.
+
+// INPUT-
+// creating class for uber price
+class Uber{
+    // total distance in KM
+    constructor(KM){
+        this.KM=KM;
+    }
+}
+ class UberAuto extends Uber{
+    //  price per KM for auto 
+     constructor(KM,AutoKM){
+     super(KM)
+     this.AutoKM=AutoKM;
+     }
+     getAutoPrice(){
+           return `
+            No bargaining , door step autos
+
+            Fair for Auto: Rs ${this.KM*this.AutoKM}/-`
+     }
+ }
+class UberPremier extends Uber{
+    constructor(KM,PremierKM){
+        super(KM)
+        this.PremierKM=PremierKM;
+        }
+        getAutoPrice(){
+           return `
+            Comfortable sedans,Top quality drivers
+
+            Fair for Premier: Rs ${this.KM*this.PremierKM}/-`
+        }
+}
+class UberGo extends Uber{
+    constructor(KM,GoKM){
+        super(KM)
+        this.GoKM=GoKM;
+        }
+        getAutoPrice(){
+            return `
+            Affordable compact rides
+
+            Fair for UberGo: Rs ${this.KM*this.GoKM}/-`
+        }
+}
+class BikeShare extends Uber{
+    constructor(KM,BikeKM){
+        super(KM)
+        this.BikeKM=BikeKM;
+        }
+        getAutoPrice(){
+            return `
+            Ride along with people on the same route
+
+            Fair for Bikeshare: Rs ${this.KM*this.BikeKM}/-`
+        }
+}
+// creating object for Auto class
+let Fair1 = new UberAuto(12,20)
+// creating object for premier class
+let Fair2 = new UberPremier(12,40)
+// creating object for Go class
+let Fair3 = new UberGo(12,30)
+// creating object for Bikeshare class
+let Fair4 = new BikeShare(12,10)
+// creating object for uber class
+let Autoprice = new Uber(12)
+// accessing instance method
+console.log(Fair1.getAutoPrice())
+console.log(Fair2.getAutoPrice())
+console.log(Fair3.getAutoPrice())
+console.log(Fair4.getAutoPrice())
+
+
+OUTPUT-
+
+
+            No bargaining , door step autos
+
+            Fair for Auto: Rs 240/-
+script.js:172 
+            Comfortable sedans,Top quality drivers
+
+            Fair for Premier: Rs 480/-
+script.js:173 
+            Affordable compact rides
+
+            Fair for UberGo: Rs 360/-
+script.js:174 
+            Ride along with people on the same route
+
+            Fair for Bikeshare: Rs 120/-
+
+
+    
+
+
+
