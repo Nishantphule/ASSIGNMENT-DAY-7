@@ -2,31 +2,61 @@
 // https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
 
 // INPUT-
+
+// creating a class for movie
 class Movie {
-  
-    constructor(title,studio,PG){
+// class constructor for movie which includes title , studio and rating strings
+    constructor(title,studio,PG="PG"){
     this.title = title;
     this.studio =studio;
     this.PG =PG;
   }
+// instance method
   getfilm(){
     let movie =` 
     Title  = ${this.title} 
     Studio = ${this.studio}
-    Rating = ${"PG"+this.PG}`
+    Rating = ${this.PG}`
      return movie;
   }
+}
+// object contaning all other movies
+      let Movies = [
+          {Title:"AAA",
+        Studio:"aaa",
+    Rating:"PG"},
+    {Title:"BBB",
+    Studio:"bbb",
+Rating:"PG",
+    },
+    {
+        Title:"CCC",
+        Studio:"ccc",
+    Rating:10,
+    },
+      ]
+// movies with "PG" rating 
+      let PGmovies=[];
+      Movies.forEach(function(movie){
+      if(movie.Rating==="PG"){
+      PGmovies.push(movie)
+      }})
+      console.log(PGmovies)
   
-  }
+// creating object for movie class
   let Film = new Movie( "Casino Royale","Eon Productions",13)
   console.log(Film.getfilm())
 
 
 CONSOLE OUTPUT-
  
+    (2) [{…}, {…}]0: {Title: 'AAA', Studio: 'aaa', Rating: 'PG'}1: {Title: 'BBB', Studio: 'bbb', Rating: 'PG'}length: 2[[Prototype]]: Array(0)
+script.js:43  
+
     Title  = Casino Royale 
     Studio = Eon Productions
-    Rating = PG13
+    Rating = 13
+
 
 
 
@@ -35,6 +65,7 @@ CONSOLE OUTPUT-
 // https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
 
 // INPUT-
+
 // CREATING A CLASS FOR Circle
 class Circle{
     // SETTER FOR CICLE
@@ -91,6 +122,7 @@ script.js:59 Circumference: 6.283185307179586
 // Write a “person” class to hold all the details.
 
 // INPUT-
+
 // creating a class for person
 class person{
 constructor(name,age,city,institute,course){
@@ -128,10 +160,12 @@ CONSOLE OUTPUT-
 
 
 
+
 // QUESTION NO. - 4
 // write a class to calculate uber price.
 
 // INPUT-
+
 // creating class for uber price
 class Uber{
     // total distance in KM
@@ -205,7 +239,7 @@ console.log(Fair3.getAutoPrice())
 console.log(Fair4.getAutoPrice())
 
 
-OUTPUT-
+CONSOLE OUTPUT-
 
 
             No bargaining , door step autos
