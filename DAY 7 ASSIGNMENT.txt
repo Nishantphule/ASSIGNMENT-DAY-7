@@ -5,14 +5,26 @@
 
 // creating a class for movie
 class Movie {
-// class constructor for movie which includes title , studio and rating strings
+  
     constructor(title,studio,PG="PG"){
     this.title = title;
     this.studio =studio;
     this.PG =PG;
   }
+  
 // instance method
-  getfilm(){
+// getter for movies with PG rating
+ getPG(Arr){
+     let PGmovie = []
+     Arr.filter(movie =>{
+         if(movie.PG==="PG"){
+         PGmovie.push(movie)
+         }
+     })
+     return PGmovie
+ }
+//  getter for movie provided in question
+ getfilm(){
     let movie =` 
     Title  = ${this.title} 
     Studio = ${this.studio}
@@ -20,42 +32,29 @@ class Movie {
      return movie;
   }
 }
-// object contaning all other movies
-      let Movies = [
-          {Title:"AAA",
-        Studio:"aaa",
-    Rating:"PG"},
-    {Title:"BBB",
-    Studio:"bbb",
-Rating:"PG",
-    },
-    {
-        Title:"CCC",
-        Studio:"ccc",
-    Rating:10,
-    },
-      ]
-// movies with "PG" rating 
-      let PGmovies=[];
-      Movies.forEach(function(movie){
-      if(movie.Rating==="PG"){
-      PGmovies.push(movie)
-      }})
-      console.log(PGmovies)
-  
-// creating object for movie class
-  let Film = new Movie( "Casino Royale","Eon Productions",13)
+//  creating objects for Movie class
+  const Film = new Movie( "Casino Royale","Eon Productions",13)
+  const Film1 = new Movie("AAA","aaa","PG")
+  const Film2 = new Movie("BBB","bbb",10)
+  const Film3 = new Movie("CCC","ccc","PG")
+  let MovieArray = [Film,Film1,Film2,Film3]
   console.log(Film.getfilm())
+  console.log(Film.getPG(MovieArray))
+
 
 
 CONSOLE OUTPUT-
  
-    (2) [{…}, {…}]0: {Title: 'AAA', Studio: 'aaa', Rating: 'PG'}1: {Title: 'BBB', Studio: 'bbb', Rating: 'PG'}length: 2[[Prototype]]: Array(0)
-script.js:43  
-
+    
     Title  = Casino Royale 
     Studio = Eon Productions
     Rating = 13
+script.js:41 
+(2) [Movie, Movie]
+0: Movie {title: 'AAA', studio: 'aaa', PG: 'PG'}
+1: Movie {title: 'CCC', studio: 'ccc', PG: 'PG'}
+length: 2
+[[Prototype]]: Array(0)
 
 
 
