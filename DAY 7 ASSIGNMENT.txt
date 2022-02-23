@@ -49,12 +49,11 @@ CONSOLE OUTPUT-
     Title  = Casino Royale 
     Studio = Eon Productions
     Rating = 13
-script.js:41 
-(2) [Movie, Movie]
+
+ [Movie, Movie]
 0: Movie {title: 'AAA', studio: 'aaa', PG: 'PG'}
 1: Movie {title: 'CCC', studio: 'ccc', PG: 'PG'}
-length: 2
-[[Prototype]]: Array(0)
+
 
 
 
@@ -87,13 +86,13 @@ getcolor(){
 // GETTER FOR AREA
 getArea(){
     let Area = 
-    `Area: ${Math.PI*(this.radius**2)} `
+    `Area: ${Math.PI.toFixed(3)*(this.radius**2)} `
      return Area;
 }
 // GETTER FOR CIRCUMFERENCE
 getCircumference(){
     let C = 
-    `Circumference: ${2*Math.PI*this.radius}`
+    `Circumference: ${2*Math.PI.toFixed(3)*this.radius}`
     return C;
 }
 }
@@ -108,10 +107,10 @@ console.log(circle.getCircumference())
 
 CONSOLE OUTPUT -
 
-Radius: 1
-script.js:57 Color: red
-script.js:58 Area: 3.141592653589793 
-script.js:59 Circumference: 6.283185307179586
+ Radius: 1
+ Color: red
+ Area: 3.142 
+ Circumference: 6.284
 
 
 
@@ -242,19 +241,15 @@ CONSOLE OUTPUT-
 
 
             No bargaining , door step autos
-
             Fair for Auto: Rs 240/-
-script.js:172 
+
             Comfortable sedans,Top quality drivers
-
             Fair for Premier: Rs 480/-
-script.js:173 
+
             Affordable compact rides
-
             Fair for UberGo: Rs 360/-
-script.js:174 
+ 
             Ride along with people on the same route
-
             Fair for Bikeshare: Rs 120/-
 
 
