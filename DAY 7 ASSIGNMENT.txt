@@ -161,6 +161,7 @@ CONSOLE OUTPUT-
 
 // QUESTION NO. - 4
 // write a class to calculate uber price.
+// assumming uber price is calculated based on price per KM for different vehicles
 
 // INPUT-
 
@@ -252,6 +253,64 @@ CONSOLE OUTPUT-
             Ride along with people on the same route
             Fair for Bikeshare: Rs 120/-
 
+
+
+ALTERNATIVE PROGRAM FOR QUESTION NO.4-
+
+// assumming uber price is calculated based on price per KM for different vehicles
+class Uber{
+    // total distance in KM
+    constructor(KM,price){
+        this.KM=KM;
+        this.price=price;
+    }
+
+    // getter for price
+    // instance methood
+    getPrice(arr){
+            let Price =` ${this.KM*this.price}`
+             return Price;
+          }
+        }
+    // creating object for Uber class
+    let Fair1 =  new Uber(12,20)
+    let Fair2 = new Uber(12,40)
+    let Fair3 = new Uber(12,30)
+    let Fair4 = new Uber(12,10)
+    // Array of all objects
+    Arrfair = [Fair1,Fair2,Fair3,Fair4]
+    
+    console.log(`
+    No bargaining , door step autos
+    Fair for UberAuto = Rs${Fair1.getPrice(Arrfair)}/-`)
+
+    console.log(`
+    Comfortable sedans,Top quality drivers
+    Fair for UberPrimier = Rs${Fair2.getPrice(Arrfair)}/-`)
+
+    console.log(` 
+    Affordable compact rides 
+    Fair for UberGo = Rs${Fair3.getPrice(Arrfair)}/-`)
+
+    console.log(`
+    Ride along with people on the same route 
+    Fair for Bikeshare = Rs${Fair4.getPrice(Arrfair)} /-`)
+    
+    
+    OUTPUT - 
+    
+    
+    No bargaining , door step autos
+    Fair for UberAuto = Rs 240/-
+ 
+    Comfortable sedans,Top quality drivers
+    Fair for UberPrimier = Rs 480/-
+ 
+    Affordable compact rides 
+    Fair for UberGo = Rs 360/-
+
+    Ride along with people on the same route 
+    Fair for Bikeshare = Rs 120 /-
 
     
 
