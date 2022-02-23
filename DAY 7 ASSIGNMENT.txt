@@ -36,7 +36,7 @@ class Movie {
   const Film = new Movie( "Casino Royale","Eon Productions",13)
   const Film1 = new Movie("AAA","aaa","PG")
   const Film2 = new Movie("BBB","bbb",10)
-  const Film3 = new Movie("CCC","ccc","PG")
+   const Film3 = new Movie("CCC","ccc")  //here rating is not provieded so it will take "PG" by default
   let MovieArray = [Film,Film1,Film2,Film3]
   console.log(Film.getfilm())
   console.log(Film.getPG(MovieArray))
